@@ -2,11 +2,10 @@ const OPENWEATHER_SEARCH_URL = 'http://api.openweathermap.org/data/2.5/forecast?
 
 function getDataFromApi(searchTerm, callback) {
   const settings = {
-    url: YOUTUBE_SEARCH_URL,
+    url: OPENWEATHER_SEARCH_URL,
     data: {
       APPID: '12344363e742a0a237023eb80cdca95b',
-      q: `${searchTerm} in:name`,
-      per_page: 10
+      id='707860'
     },
     
     dataType: 'json',
@@ -24,7 +23,6 @@ function renderResult(result) {
 }
 
 function displayResults(data) {
-  const results = data.items.map(renderResult).join("");
   $('.js-search-results').html(renderResults);
 }
 
